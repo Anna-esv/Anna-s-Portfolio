@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe4e1; /* Pink background color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the body content horizontally */
+}
+
+h1 {
+  font-family: 'Lobster', cursive; /* Change this to your desired font */
+  font-size: 3em; /* You can adjust the size as needed */
+  color: #333;
+  display: flex;
+  gap: 5px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto; /* Centers the container and adds space around it */
+    padding: 0 20px; /* Adds padding inside the container */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the container's width */
+}
+
+.card-white {
+    background-color: #ffedd5;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px; /* Increased padding for more space inside the cards */
+    text-align: center;
+}
+
+h1 {
+    color: #FF69B4;
+}
+
+h2 {
+    color: #40E0D0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.follow-me-btn {
+    background-color: #FF69B4;
+    color: rgb(255, 233, 188);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.internships {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.internship {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.internship-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.internship ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.internship img {
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 150px;
+}
+
+img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; 
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Cache les images qui dépassent */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease; /* Ajoute une transition fluide */
+}
+
+.carousel-slide img {
+    min-width: calc(100% / 2.5); /* Affiche 2,5 images à la fois */
+    margin-right: 10px; /* Espace entre les images */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour des images */
+}
+
+.carousel-slide img:last-child {
+    margin-right: 0; /* Pas d'espace après la dernière image */
+}
+
+.prev-btn, .next-btn {
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 20px; /* Taille de la flèche */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.mirror {
+    transform: scaleX(-1); /* Retourner horizontalement l'icône */
+}
+
+
+.travel-destinations {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.social-links a {
+    color: #40E0D0;
+    font-size: 24px;
+}
+
+.card-white p strong {
+    color: #FFB347;
+}
+
+.follow-me-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #FF1493; /* Darker pink */
+    color: white;
+    transform: scale(1.05); /* Slightly increase size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.social-links a:hover {
+    color: #FF69B4; /* Change to pink on hover */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%; /* Make carousel full-width on smaller screens */
+    }
+    
+    .carousel-slide img {
+        width: 100%; /* Make images responsive */
+    }
+    
+    .internship img {
+        max-width: 100%; /* Ensure internship images are responsive */
+    }
+    
+    h1, h2, h3 {
+        font-size: 1.5em; /* Scale down heading sizes */
+    }
+}
